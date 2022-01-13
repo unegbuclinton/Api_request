@@ -23,7 +23,7 @@ function App() {
           setData(response.data.photos)
 
           })
-            setIsLoading (true)
+     
      }, [url])   
 
 
