@@ -2,7 +2,7 @@ import axios from 'axios'
 import './App.css';
 import { useState,useEffect} from 'react'
 import ImgPage from './components/ImgPage';
-import Spinner from 'react-bootstrap/Spinner'
+
 
 
 
@@ -10,7 +10,7 @@ function App() {
 
   const [data, setData] =useState ([])
 
-  const [isLoading, setIsLoading] = useState(false)
+
 
   
 
@@ -43,15 +43,10 @@ function App() {
 
         <div className='wrapper'>
   
-          {isLoading ? data.map(e=> <ImgPage key={e.id} data ={e} />) : <Spinner animation="border" />}
-
+          { data.map(e=> <ImgPage key={e.id} data ={e} />)}
 
         </div>
-
-       
-       
-
-     
+   
 
       </div>
      
